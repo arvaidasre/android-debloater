@@ -1,17 +1,5 @@
 #!/bin/bash
 
-# Improved ASCII Art Intro
-cat << "EOF"
-  ________     ___   _ _  __ _____ 
- |  ____\ \   / / \ | | |/ // ____|
- | |__   \ \_/ /|  \| | ' /| (___  
- |  __|   \   / | . ` |  <  \___ \ 
- | |       | |  | |\  | . \ ____) |
- |_|       |_|  |_| \_|_|\_\_____/ 
-                                   
- F Y N K S - Package Disabler Script     
-EOF
-
 # Get device information
 DEVICE_MODEL=$(adb shell getprop ro.product.model 2>/dev/null || echo "Unknown")
 ANDROID_VER=$(adb shell getprop ro.build.version.release 2>/dev/null || echo "Unknown")
@@ -19,7 +7,7 @@ BUILD_NUM=$(adb shell getprop ro.build.display.id 2>/dev/null || echo "Unknown")
 SECURITY_PATCH=$(adb shell getprop ro.build.version.security_patch 2>/dev/null || echo "Unknown")
 
 # Display device information
-echo -e "\n${BLUE}╔════════════════ Device Information ═══════════════╗${RESET}"
+echo -e "\n${BLUE}╔════════════════ Android Debloater ═══════════════╗${RESET}"
 echo -e "${BLUE}║${RESET} Model:          ${GREEN}${DEVICE_MODEL}${RESET}"
 echo -e "${BLUE}║${RESET} Android:        ${GREEN}${ANDROID_VER}${RESET}"
 echo -e "${BLUE}║${RESET} Build:          ${GREEN}${BUILD_NUM}${RESET}"
