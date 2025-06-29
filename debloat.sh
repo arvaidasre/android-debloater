@@ -350,7 +350,7 @@ run_debloating_process() {
     local current=0
     
     echo -e "${BOLD}${BLUE}Starting debloating process...${RESET}"
-    echo -e "${BLUE}${'─' * 60}${RESET}\n"
+    echo -e "${BLUE}$(printf '─%.0s' {1..60})${RESET}\n"
     
     # Process packages by category
     for category in "${!PACKAGE_CATEGORIES[@]}"; do
@@ -366,7 +366,7 @@ run_debloating_process() {
         echo -e "\n"
     done
     
-    echo -e "\n${BLUE}${'─' * 60}${RESET}"
+    echo -e "\n${BLUE}$(printf '─%.0s' {1..60})${RESET}"
 }
 
 # Calculate and display execution time
